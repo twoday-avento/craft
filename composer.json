@@ -1,6 +1,7 @@
 {
-  "name": "craftcms/craft",
-  "description": "Craft CMS",
+  "name": "twoday-avento/craft",
+  "description": "Craft Starter",
+  "version": "1.0.0",
   "keywords": [
     "craft",
     "cms",
