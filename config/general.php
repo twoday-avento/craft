@@ -24,6 +24,8 @@ return GeneralConfig::create()
     ->preloadSingles()
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
+	// Set custom error template folder
+	->errorTemplatePrefix('_errors/')
     // Enable Dev Mode (see https://craftcms.com/guides/what-dev-mode-does)
     ->devMode(App::env('DEV_MODE') ?? false)
     // Allow administrative changes

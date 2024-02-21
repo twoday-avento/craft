@@ -1,0 +1,8 @@
+{% extends "_layouts/default.twig" %}
+
+{% block content %}
+  <div class="max-w-xs">
+    <h1 class="text-xl">{{ (title ?? null) ?: "Oops!"|t }}</h1>
+    <p>{{ (message ?? null) ?: "An error has occurred."|t }}</p>
+  </div>
+{% endblock %}

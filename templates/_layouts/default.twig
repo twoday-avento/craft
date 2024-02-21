@@ -1,0 +1,56 @@
+{% extends "_layouts/base" %}
+
+{% block response %}
+  <!DOCTYPE html>
+  {% block htmlTag %}
+  <html class="no-js" lang="{{ currentSite.language }}">
+  {% endblock %}
+    <head>
+      {# -- Default meta tags -- #}
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+      <meta name="referrer" content="origin-when-cross-origin" />
+
+      {# -- Any <meta> tags that should be included in the <head> -- #}
+      {% block headMeta %}
+      {% endblock headMeta %}
+
+      <title>{{ siteName }}</title>
+
+      {# -- Site-wide CSS -- #}
+      {# -- Any <link> tags that should be included in the <head> -- #}
+      {% block headLinks %}
+      {% endblock headLinks %}
+
+      {# -- Inline and critical CSS #}
+      <style>
+        [x-cloak] {display: none !important;}
+        {# -- Any CSS that should be included before </head> -- #}
+        {% block headCss %}
+        {% endblock headCss %}
+      </style>
+
+      {# -- Any JavaScript that should be included before </head> -- #}
+      {% block headJs %}
+        {{ craft.vite.script("src/js/app.js", false) }}
+      {% endblock headJs %}
+    </head>
+    {% block bodyTag %}
+    <body>
+    {% endblock %}
+      {# -- Global header -- #}
+      {% include "_includes/header" %}
+
+      {# -- The page content -- #}
+      {% block content %}{% endblock %}
+
+      {# -- Global footer -- #}
+      {% include "_includes/footer" %}
+
+      {# -- Any JavaScript that should be included before </body> -- #}
+      {% block bodyJs %}
+      {% endblock bodyJs %}
+    </body>
+  </html>
+{% endblock %}
