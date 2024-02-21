@@ -1,7 +1,8 @@
 {
   "packages": {
     "twoday-avento/craft": {
-      "1.0.0": { @composer.json }
+      "1.0.0": { @composer.json },
+      "dev-main": { @composer.json }
     }
   }
 }
