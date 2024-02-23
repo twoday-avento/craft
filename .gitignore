@@ -6,3 +6,4 @@
 /yarn.lock
 /composer.lock
 /config/license.key
+/storage/config-deltas
