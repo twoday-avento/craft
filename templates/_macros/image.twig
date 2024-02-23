@@ -21,8 +21,8 @@
         { width: 1920 },
       ],
       ratio: null,
-      format: image.extension not in ['svg'] and craft.imager.serverSupportsWebp() and craft.imager.clientSupports('webp') ? 'webp' : image.extension,
       attributes: {},
+      format: (image.extension not in ['svg'] and craft.imager.serverSupportsWebp() and craft.imager.clientSupports('webp')) ? 'webp' : image.extension,
     }|merge(opts) %}
 
 
@@ -30,8 +30,8 @@
       image,
       opts.sizes,
       {
-        opts.ratio,
-        opts.format,
+        ratio: opts.ratio,
+        format: opts.format,
         position: image.getFocalPoint(),
         jpegQuality: 85,
       },
@@ -51,11 +51,11 @@
       height: transformedImages[0].getHeight(),
       loading: opts.lazyload ? 'lazy' : 'eager',
     }|merge(opts.attributes) %}
-
-    <picture>
-      <img {{ attr(attributes) }}>
-    </picture>
   {% endapply %}
+
+  <picture>
+    <img {{ attr(attributes) }}>
+  </picture>
 {% endmacro %}
 
 

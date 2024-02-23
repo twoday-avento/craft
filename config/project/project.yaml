@@ -1,0 +1,100 @@
+dateModified: 1708678961
+elementSources:
+  craft\elements\Entry:
+    - defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: "*"
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - author
+        - link
+      type: native
+    - heading: Pages
+      type: heading
+    - key: "single:d767c2cb-c786-4ee5-9c31-5d74f894330d" # Homepage
+      type: native
+    - key: "section:895e2e68-6054-4354-a6a8-b457ec60b48e" # Pages
+      type: native
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $PRIMARY_SITE_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    useAuthentication: $SMTP_USE_AUTHENTICATION
+    username: $SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: "@webroot/uploads/images"
+    type: craft\fs\Local
+    url: "@web/uploads/images"
+meta:
+  __names__:
+    2ec1ec77-ac72-4fb9-902b-da027b9b43d2: Default # Default
+    03c95542-ae23-47da-b13d-e2c3a9f1c098: Common # Common
+    4a225389-8e62-4cf2-a2a4-98db6a7f36c1: Text # Text
+    6bcf800f-abaf-4d08-8d13-e5f062f5be41: Full # Full
+    7bb033bf-bb26-43fe-99ee-95f73e60fd6d: Default # Default
+    08da9e25-b904-45c4-babf-0293556760f6: Simple # Simple
+    9e6da59d-4d18-417e-ad3f-2bb44d8cca5b: Editors # Editors
+    65fda9c3-425a-43cb-b922-f71bd68fb32f: Homepage # Homepage
+    579be2ce-4cbb-4b47-948e-8d9e6a3fc1ac: "Rich Text" # Rich Text
+    895e2e68-6054-4354-a6a8-b457ec60b48e: Pages # Pages
+    a1a8f47d-bc64-4e83-b84b-951a11df4a8e: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    a65d245a-af74-4f33-bf7f-1776f851d04b: "Public Schema" # Public Schema
+    aa206765-813c-411c-84c4-33f960a7ffb4: Image # Image
+    ab14d0d5-64c5-4aa4-a0a9-eba30e6f8e87: Blocks # Blocks
+    b2f38830-4aed-452f-a5c0-c94f0483066b: Images # Images
+    d767c2cb-c786-4ee5-9c31-5d74f894330d: Homepage # Homepage
+    d307767d-4f9c-4516-9aa8-168eb852cdaa: Image # Image
+    e26ae72c-1e23-475b-8cbe-20e01eee8649: SEO # SEO
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+  imager-x:
+    edition: pro
+    enabled: true
+    licenseKey: null
+    schemaVersion: 4.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.12
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: $IS_SYSTEM_LIVE
+  name: $PRIMARY_SITE_NAME
+  retryDuration: null
+  schemaVersion: 4.5.3.0
+  timeZone: Europe/Oslo
