@@ -1,8 +1,8 @@
-{% import "_macros/image" as _image %}
+{% import "_macros/images" as _images %}
 
 {% set image = block.image.one() %}
 {% if image %}
-  {{ _image.image(block.image.one, {
+  {{ _images.image(block.image.one, {
     class: 'block w-full',
   }) }}
 {% endif %}
