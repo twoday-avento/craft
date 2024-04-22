@@ -1,0 +1,85 @@
+description: ''
+handle: editors
+name: Editors
+permissions:
+  - accesscp
+  - accessplugin-seomatic
+  - 'assignusergroup:fc3561fe-8dad-4fa4-80b6-86b11755853c' # Editors
+  - assignuserpermissions
+  - 'createentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'createentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'createentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'createfolders:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'deleteassets:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'deleteentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'deleteentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'deleteentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'deletepeerassets:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'deletepeerentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'deletepeerentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'deletepeerentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'deletepeerentrydrafts:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'deletepeerentrydrafts:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'deletepeerentrydrafts:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - deleteusers
+  - 'editimages:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'editpeerimages:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - editusers
+  - impersonateusers
+  - moderateusers
+  - registerusers
+  - 'replacefiles:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'replacepeerfiles:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'saveassets:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'saveentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'saveentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'saveentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'savepeerassets:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'savepeerentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'savepeerentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'savepeerentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'savepeerentrydrafts:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'savepeerentrydrafts:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'savepeerentrydrafts:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'seomatic:content-meta'
+  - 'seomatic:content-meta:facebook'
+  - 'seomatic:content-meta:general'
+  - 'seomatic:content-meta:sitemap'
+  - 'seomatic:content-meta:twitter'
+  - 'seomatic:dashboard'
+  - 'seomatic:global-meta'
+  - 'seomatic:global-meta:ads'
+  - 'seomatic:global-meta:facebook'
+  - 'seomatic:global-meta:general'
+  - 'seomatic:global-meta:humans'
+  - 'seomatic:global-meta:robots'
+  - 'seomatic:global-meta:security'
+  - 'seomatic:global-meta:twitter'
+  - 'seomatic:site-settings'
+  - 'seomatic:site-settings:creator'
+  - 'seomatic:site-settings:identity'
+  - 'seomatic:site-settings:miscellaneous'
+  - 'seomatic:site-settings:sitemap'
+  - 'seomatic:site-settings:social'
+  - 'seomatic:tracking-scripts'
+  - 'seomatic:tracking-scripts:facebookpixel'
+  - 'seomatic:tracking-scripts:fathom'
+  - 'seomatic:tracking-scripts:googleanalytics'
+  - 'seomatic:tracking-scripts:googletagmanager'
+  - 'seomatic:tracking-scripts:gtag'
+  - 'seomatic:tracking-scripts:hubspot'
+  - 'seomatic:tracking-scripts:linkedininsight'
+  - 'seomatic:tracking-scripts:matomo'
+  - 'seomatic:tracking-scripts:pinteresttag'
+  - 'seomatic:tracking-scripts:plausible'
+  - 'viewassets:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'viewentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'viewentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'viewentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'viewpeerassets:e651ddfa-4f4e-47a9-a882-f806817cf542' # Images
+  - 'viewpeerentries:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'viewpeerentries:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'viewpeerentries:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
+  - 'viewpeerentrydrafts:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
+  - 'viewpeerentrydrafts:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
+  - 'viewpeerentrydrafts:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News

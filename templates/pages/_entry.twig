@@ -5,6 +5,8 @@
   {% if blocks|length %}
     {% include "_includes/blocks" with { blocks } %}
   {% else %}
-    {% include "_includes/welcome" %}
+    {% if devMode %}
+      {% include "_includes/welcome" %}
+    {% endif %}
   {% endif %}
 {% endblock %}

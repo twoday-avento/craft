@@ -1,0 +1,23 @@
+{% extends "_layouts/default" %}
+{% import "_macros/images" as _images %}
+
+{% block content %}
+
+  <h1>{{ entry.title }}</h1>
+
+  {% set image = entry.image.one() %}
+  {% if image %}
+    {{ _images.image(image, {
+      class: 'block w-full',
+    }) }}
+  {% endif %}
+
+  {% if entry.lead|length %}
+    <div class="prose">{{ entry.lead }}</div>
+  {% endif %}
+
+  {% set blocks = entry.blocks.all() %}
+  {% if blocks|length %}
+    {% include "_includes/blocks" with { blocks } %}
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,116 @@
+dateModified: 1713772867
+elementSources:
+  craft\elements\Entry:
+    - defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: "*"
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    - heading: Navigation
+      type: heading
+    - key: "section:02ae28ba-6fdd-4ad9-ae6f-952ad3483887" # Navigation
+      type: native
+    - heading: Content
+      type: heading
+    - defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: "section:613f92db-4bb4-400f-b1df-1e37fba55961" # Pages
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    - defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: "section:aef30056-a9c7-4a87-a999-9cf26b80e6d3" # News
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
+      type: native
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $PRIMARY_SITE_NAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    host: $SMTP_HOST
+    password: $SMTP_PASSWORD
+    port: $SMTP_PORT
+    useAuthentication: $SMTP_USE_AUTHENTICATION
+    username: $SMTP_USERNAME
+  transportType: craft\mail\transportadapters\Smtp
+fs:
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: "@webroot/uploads/images"
+    type: craft\fs\Local
+    url: "@web/uploads/images"
+meta:
+  __names__:
+    1fd09dd1-0996-4e48-bdfe-823ade1c615d: Link # Link
+    02ae28ba-6fdd-4ad9-ae6f-952ad3483887: Navigation # Navigation
+    2e6ecf0e-b3d2-4856-8ffd-e8f9ca0f578d: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    3a95c683-1667-4e1f-88ab-573bbb63d794: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    8b6f2883-ab57-43e3-ade5-c4cad6bd1437: Image # Image
+    87c7600f-33e8-428e-bf26-6e7ae2e810c5: Page # Page
+    343ae097-c332-41f0-adc6-e09c5c3a0b82: Blocks # Blocks
+    357f8891-a837-4fb8-a9c0-fdb55feb61b9: Simple # Simple
+    613f92db-4bb4-400f-b1df-1e37fba55961: Pages # Pages
+    3788fd07-2352-495d-be22-d8ceaa06f7d3: "Rich Text" # Rich Text
+    801289e1-712a-4546-9107-f8ea1e126509: Image # Image
+    aef30056-a9c7-4a87-a999-9cf26b80e6d3: News # News
+    ba36ec90-12b5-4a35-b2ac-ba369f2cfa8e: "Rich Text" # Rich Text
+    c46a4e36-bc72-455a-9585-f65ecdf63d5d: SEO # SEO
+    dc7a710c-47fe-49c0-b644-8c9b1fffc1b6: "News Article" # News Article
+    e651ddfa-4f4e-47a9-a882-f806817cf542: Images # Images
+    fc3561fe-8dad-4fa4-80b6-86b11755853c: Editors # Editors
+    fd491bb6-4aa3-4598-9f0e-0b8a5d4211f8: "Navigation Item" # Navigation Item
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  hyper:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 1.0.0
+  imager-x:
+    edition: lite
+    enabled: true
+    licenseKey: null
+    schemaVersion: 4.0.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: null
+    schemaVersion: 3.0.12
+  sprig:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.1
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: pro
+  live: true
+  name: $PRIMARY_SITE_NAME
+  retryDuration: null
+  schemaVersion: 5.0.0.20
+  timeZone: America/Los_Angeles
