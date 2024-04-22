@@ -1,6 +1,9 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  - 87c7600f-33e8-428e-bf26-6e7ae2e810c5 # Page
 handle: pages
+maxAuthors: 1
 name: Pages
 previewTargets:
   -
@@ -16,12 +19,12 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  a1a8f47d-bc64-4e83-b84b-951a11df4a8e: # $PRIMARY_SITE_NAME
+  2e6ecf0e-b3d2-4856-8ffd-e8f9ca0f578d: # $PRIMARY_SITE_NAME
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry
     uriFormat: '{parent.uri}/{slug}'
 structure:
   maxLevels: null
-  uid: f6d8a675-03fa-44d4-8fef-68b4cef10013
+  uid: 214900af-568b-4838-8483-1e5dea0eb01c
 type: structure

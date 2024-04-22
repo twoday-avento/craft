@@ -5,5 +5,5 @@ hasUrls: true
 language: en-US
 name: $PRIMARY_SITE_NAME
 primary: true
-siteGroup: 7bb033bf-bb26-43fe-99ee-95f73e60fd6d # Default
+siteGroup: 3a95c683-1667-4e1f-88ab-573bbb63d794 # $PRIMARY_SITE_NAME
 sortOrder: 1

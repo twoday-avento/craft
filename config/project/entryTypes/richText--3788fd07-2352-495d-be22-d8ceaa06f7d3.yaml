@@ -1,5 +1,6 @@
+color: null
 fieldLayouts:
-  5d4a35a3-3d0c-4b44-85d3-721a26692fc8:
+  5f1cb6b2-f515-427f-93a8-3bfadfdd2c52:
     tabs:
       -
         elementCondition: null
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -27,51 +30,36 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 399ee726-bee5-4b7b-a39f-158c45a00445
+            uid: acaf6379-c47f-4f8e-989a-a60259bb1edf
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: ab14d0d5-64c5-4aa4-a0a9-eba30e6f8e87 # Blocks
+            fieldUid: ba36ec90-12b5-4a35-b2ac-ba369f2cfa8e # Rich Text
+            handle: text
+            includeInCards: false
             instructions: null
-            label: null
-            required: false
+            label: Text
+            providesThumbs: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 17fc64c4-7bd7-4aaa-a9c5-c239117676bc
+            uid: ca5caf5a-60db-4bd1-b19b-d80ad98ae2be
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 4404f713-4612-4bff-b281-b5561699aa31
+        uid: 4f9090ee-0887-4ca9-9d13-7ff9674d6e47
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: e26ae72c-1e23-475b-8cbe-20e01eee8649 # SEO
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 573fc8d0-2481-409b-8674-8222b370a0bd
-            userCondition: null
-            warning: null
-            width: 100
-        name: SEO
-        uid: 39aa1689-783e-4c11-a9ba-6966724ba7d3
-        userCondition: null
-handle: homepage
+handle: richText
 hasTitleField: false
-name: Homepage
-section: d767c2cb-c786-4ee5-9c31-5d74f894330d # Homepage
-showStatusField: true
+icon: ''
+name: 'Rich Text'
+showSlugField: false
+showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
-titleFormat: '{section.name|raw}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

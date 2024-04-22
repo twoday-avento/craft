@@ -1,5 +1,7 @@
+altTranslationKeyFormat: null
+altTranslationMethod: none
 fieldLayouts:
-  354c0adc-8c34-45c6-8fbc-29ee7bf2c07c:
+  eb54cf58-45f2-4499-a19e-bb2d4a169170:
     tabs:
       -
         elementCondition: null
@@ -12,6 +14,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +23,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -27,7 +31,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: d9e29daa-9321-4f44-90de-6c633dcedd2c
+            uid: 4aa11e89-7933-450b-ae7a-adf7ff0e548b
             userCondition: null
             warning: null
             width: 100
@@ -38,11 +42,13 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             instructions: null
             label: null
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: true
             required: false
@@ -50,18 +56,19 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AltField
-            uid: db4cedaf-21ae-4991-8bd9-affacfc99343
+            uid: 98183ba1-1c71-414f-9697-167d45a99b0f
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: dc1c8f4c-a700-450c-88cb-0fe159248b28
+        uid: 1aa63c8d-ff14-44cc-ab2b-ac8330dfd841
         userCondition: null
 fs: images
 handle: images
 name: Images
 sortOrder: 1
+subpath: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: images
+transformFs: ''
 transformSubpath: ''

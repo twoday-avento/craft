@@ -1,27 +1,43 @@
-dateModified: 1712301913
+dateModified: 1713772867
 elementSources:
   craft\elements\Entry:
-    -
-      defaultSort:
+    - defaultSort:
         - postDate
         - desc
       disabled: false
-      key: '*'
+      key: "*"
       tableAttributes:
         - section
         - postDate
         - expiryDate
-        - author
         - link
       type: native
-    -
-      heading: Pages
+    - heading: Navigation
       type: heading
-    -
-      key: 'single:d767c2cb-c786-4ee5-9c31-5d74f894330d' # Homepage
+    - key: "section:02ae28ba-6fdd-4ad9-ae6f-952ad3483887" # Navigation
       type: native
-    -
-      key: 'section:895e2e68-6054-4354-a6a8-b457ec60b48e' # Pages
+    - heading: Content
+      type: heading
+    - defaultSort:
+        - structure
+        - asc
+      disabled: false
+      key: "section:613f92db-4bb4-400f-b1df-1e37fba55961" # Pages
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    - defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: "section:aef30056-a9c7-4a87-a999-9cf26b80e6d3" # News
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - link
       type: native
 email:
   fromEmail: $SYSTEM_EMAIL
@@ -40,52 +56,48 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: '@webroot/uploads/images'
+      path: "@webroot/uploads/images"
     type: craft\fs\Local
-    url: '@web/uploads/images'
+    url: "@web/uploads/images"
 meta:
   __names__:
-    2ec1ec77-ac72-4fb9-902b-da027b9b43d2: Default # Default
-    03c95542-ae23-47da-b13d-e2c3a9f1c098: Common # Common
-    4a225389-8e62-4cf2-a2a4-98db6a7f36c1: Text # Text
-    6bcf800f-abaf-4d08-8d13-e5f062f5be41: Full # Full
-    7bb033bf-bb26-43fe-99ee-95f73e60fd6d: Default # Default
-    08da9e25-b904-45c4-babf-0293556760f6: Simple # Simple
-    9e6da59d-4d18-417e-ad3f-2bb44d8cca5b: Editors # Editors
-    65fda9c3-425a-43cb-b922-f71bd68fb32f: Homepage # Homepage
-    579be2ce-4cbb-4b47-948e-8d9e6a3fc1ac: 'Rich Text' # Rich Text
-    895e2e68-6054-4354-a6a8-b457ec60b48e: Pages # Pages
-    a1a8f47d-bc64-4e83-b84b-951a11df4a8e: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
-    a65d245a-af74-4f33-bf7f-1776f851d04b: 'Public Schema' # Public Schema
-    aa206765-813c-411c-84c4-33f960a7ffb4: Image # Image
-    ab14d0d5-64c5-4aa4-a0a9-eba30e6f8e87: Blocks # Blocks
-    b2f38830-4aed-452f-a5c0-c94f0483066b: Images # Images
-    d767c2cb-c786-4ee5-9c31-5d74f894330d: Homepage # Homepage
-    d307767d-4f9c-4516-9aa8-168eb852cdaa: Image # Image
-    e26ae72c-1e23-475b-8cbe-20e01eee8649: SEO # SEO
+    1fd09dd1-0996-4e48-bdfe-823ade1c615d: Link # Link
+    02ae28ba-6fdd-4ad9-ae6f-952ad3483887: Navigation # Navigation
+    2e6ecf0e-b3d2-4856-8ffd-e8f9ca0f578d: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    3a95c683-1667-4e1f-88ab-573bbb63d794: $PRIMARY_SITE_NAME # $PRIMARY_SITE_NAME
+    8b6f2883-ab57-43e3-ade5-c4cad6bd1437: Image # Image
+    87c7600f-33e8-428e-bf26-6e7ae2e810c5: Page # Page
+    343ae097-c332-41f0-adc6-e09c5c3a0b82: Blocks # Blocks
+    357f8891-a837-4fb8-a9c0-fdb55feb61b9: Simple # Simple
+    613f92db-4bb4-400f-b1df-1e37fba55961: Pages # Pages
+    3788fd07-2352-495d-be22-d8ceaa06f7d3: "Rich Text" # Rich Text
+    801289e1-712a-4546-9107-f8ea1e126509: Image # Image
+    aef30056-a9c7-4a87-a999-9cf26b80e6d3: News # News
+    ba36ec90-12b5-4a35-b2ac-ba369f2cfa8e: "Rich Text" # Rich Text
+    c46a4e36-bc72-455a-9585-f65ecdf63d5d: SEO # SEO
+    dc7a710c-47fe-49c0-b644-8c9b1fffc1b6: "News Article" # News Article
+    e651ddfa-4f4e-47a9-a882-f806817cf542: Images # Images
+    fc3561fe-8dad-4fa4-80b6-86b11755853c: Editors # Editors
+    fd491bb6-4aa3-4598-9f0e-0b8a5d4211f8: "Navigation Item" # Navigation Item
 plugins:
   ckeditor:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
-  expanded-singles:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   hyper:
     edition: standard
     enabled: true
-    licenseKey: CWP0FYG2B97AGH2JHX1QECIO
+    licenseKey: null
     schemaVersion: 1.0.0
   imager-x:
-    edition: pro
+    edition: lite
     enabled: true
-    licenseKey: R3KAZA4KBRXMC7PTF4XAPN7A
+    licenseKey: null
     schemaVersion: 4.0.0
   seomatic:
     edition: standard
     enabled: true
-    licenseKey: 9DV8GCMHJ83Q0DZC47CJLRUJ
+    licenseKey: null
     schemaVersion: 3.0.12
   sprig:
     edition: standard
@@ -97,8 +109,8 @@ plugins:
     schemaVersion: 1.0.0
 system:
   edition: pro
-  live: $IS_SYSTEM_LIVE
+  live: true
   name: $PRIMARY_SITE_NAME
   retryDuration: null
-  schemaVersion: 4.5.3.0
-  timeZone: Europe/Oslo
+  schemaVersion: 5.0.0.20
+  timeZone: America/Los_Angeles

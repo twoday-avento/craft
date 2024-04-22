@@ -2,7 +2,7 @@
 
 {% set image = block.image.one() %}
 {% if image %}
-  {{ _images.image(block.image.one, {
+  {{ _images.image(image, {
     class: 'block w-full',
   }) }}
 {% endif %}

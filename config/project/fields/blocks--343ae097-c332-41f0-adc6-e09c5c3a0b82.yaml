@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: blocks
+instructions: null
+name: Blocks
+searchable: true
+settings:
+  createButtonLabel: 'Add block'
+  entryTypes:
+    - 3788fd07-2352-495d-be22-d8ceaa06f7d3 # Rich Text
+    - 801289e1-712a-4546-9107-f8ea1e126509 # Image
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

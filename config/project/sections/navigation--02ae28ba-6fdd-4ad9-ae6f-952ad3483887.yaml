@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - fd491bb6-4aa3-4598-9f0e-0b8a5d4211f8 # Navigation Item
+handle: navigation
+maxAuthors: 1
+name: Navigation
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - Homepage
+      -
+        - urlFormat
+        - /
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  2e6ecf0e-b3d2-4856-8ffd-e8f9ca0f578d: # $PRIMARY_SITE_NAME
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: b65e732e-6f21-4c60-8376-60aee0a5acaa
+type: structure

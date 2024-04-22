@@ -1,5 +1,6 @@
+color: null
 fieldLayouts:
-  63463221-2571-43db-8fd3-5d1ef69c97a4:
+  6b60e941-9fe7-4f74-98c8-612b6e171bc0:
     tabs:
       -
         elementCondition: null
@@ -12,6 +13,7 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
+            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -20,6 +22,7 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
+            providesThumbs: false
             readonly: false
             requirable: false
             size: null
@@ -27,51 +30,71 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e85445ba-5d4b-419d-a6e2-689d900457e3
+            uid: a836f834-1dca-41e1-b7a8-599070554b96
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: ab14d0d5-64c5-4aa4-a0a9-eba30e6f8e87 # Blocks
+            fieldUid: 8b6f2883-ab57-43e3-ade5-c4cad6bd1437 # Image
+            handle: null
+            includeInCards: false
             instructions: null
             label: null
+            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9d9c53e2-44c6-46cd-a2e4-3982f86318c3
+            uid: dcaa9987-a7c8-426b-9668-f7f5ba1b58b9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ba36ec90-12b5-4a35-b2ac-ba369f2cfa8e # Rich Text
+            handle: lead
+            includeInCards: false
+            instructions: null
+            label: Lead
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae5f7700-4896-42c1-8266-bd03ba7cfc3d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d38ec6ba-2665-4fbe-a8ae-353e914a7f35
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 343ae097-c332-41f0-adc6-e09c5c3a0b82 # Blocks
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b90dbda8-20c3-459b-be26-87eb15d55b6b
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: edf7cfef-f6ec-41ac-b483-c93d2b1bbdda
+        uid: 5d19e5bd-279f-4d8a-8fb6-cb002fb9b896
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: e26ae72c-1e23-475b-8cbe-20e01eee8649 # SEO
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 2447dd24-186d-4bf1-9b27-4fa5a8a21e60
-            userCondition: null
-            warning: null
-            width: 100
-        name: SEO
-        uid: 262a0692-1236-4fc3-8dc0-966df95489e4
-        userCondition: null
-handle: default
+handle: newsArticle
 hasTitleField: true
-name: Default
-section: 895e2e68-6054-4354-a6a8-b457ec60b48e # Pages
+icon: ''
+name: 'News Article'
+showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
-titleFormat: null
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
