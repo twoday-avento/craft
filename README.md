@@ -22,6 +22,7 @@ The best way to spin up your first project is with [DDEV](https://ddev.com/), a 
 3. Configure a new DDEV [project](https://ddev.readthedocs.io/en/latest/users/quickstart/#craft-cms), and install CraftUp:
 
    ```bash
+   # Configure the ddev project
    ddev config --project-type=craftcms --docroot=web --create-docroot
 
    # Use this package as a starting point:
