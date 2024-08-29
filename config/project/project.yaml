@@ -1,39 +1,45 @@
-dateModified: 1713772867
+dateModified: 1724918650
 elementSources:
   craft\elements\Entry:
-    - defaultSort:
+    -
+      defaultSort:
         - postDate
         - desc
       disabled: false
-      key: "*"
+      key: '*'
       tableAttributes:
         - section
         - postDate
         - expiryDate
         - link
       type: native
-    - heading: Navigation
+    -
+      heading: Navigation
       type: heading
-    - key: "section:02ae28ba-6fdd-4ad9-ae6f-952ad3483887" # Navigation
+    -
+      key: 'section:02ae28ba-6fdd-4ad9-ae6f-952ad3483887' # Navigation
       type: native
-    - heading: Content
+    -
+      heading: Content
       type: heading
-    - defaultSort:
+    -
+      defaultSort:
         - structure
         - asc
       disabled: false
-      key: "section:613f92db-4bb4-400f-b1df-1e37fba55961" # Pages
+      key: 'section:613f92db-4bb4-400f-b1df-1e37fba55961' # Pages
       tableAttributes:
         - postDate
         - expiryDate
         - authors
         - link
       type: native
-    - defaultSort:
+    -
+      defaultSort:
         - postDate
         - desc
       disabled: false
-      key: "section:aef30056-a9c7-4a87-a999-9cf26b80e6d3" # News
+      key: 'section:aef30056-a9c7-4a87-a999-9cf26b80e6d3' # News
       tableAttributes:
         - postDate
         - expiryDate
@@ -56,9 +62,9 @@ fs:
     hasUrls: true
     name: Images
     settings:
-      path: "@webroot/uploads/images"
+      path: '@webroot/uploads/images'
     type: craft\fs\Local
-    url: "@web/uploads/images"
+    url: '@web/uploads/images'
 meta:
   __names__:
     1fd09dd1-0996-4e48-bdfe-823ade1c615d: Link # Link
@@ -70,15 +76,15 @@ meta:
     343ae097-c332-41f0-adc6-e09c5c3a0b82: Blocks # Blocks
     357f8891-a837-4fb8-a9c0-fdb55feb61b9: Simple # Simple
     613f92db-4bb4-400f-b1df-1e37fba55961: Pages # Pages
-    3788fd07-2352-495d-be22-d8ceaa06f7d3: "Rich Text" # Rich Text
+    3788fd07-2352-495d-be22-d8ceaa06f7d3: 'Rich Text' # Rich Text
     801289e1-712a-4546-9107-f8ea1e126509: Image # Image
     aef30056-a9c7-4a87-a999-9cf26b80e6d3: News # News
-    ba36ec90-12b5-4a35-b2ac-ba369f2cfa8e: "Rich Text" # Rich Text
+    ba36ec90-12b5-4a35-b2ac-ba369f2cfa8e: 'Rich Text' # Rich Text
     c46a4e36-bc72-455a-9585-f65ecdf63d5d: SEO # SEO
-    dc7a710c-47fe-49c0-b644-8c9b1fffc1b6: "News Article" # News Article
+    dc7a710c-47fe-49c0-b644-8c9b1fffc1b6: 'News Article' # News Article
     e651ddfa-4f4e-47a9-a882-f806817cf542: Images # Images
     fc3561fe-8dad-4fa4-80b6-86b11755853c: Editors # Editors
-    fd491bb6-4aa3-4598-9f0e-0b8a5d4211f8: "Navigation Item" # Navigation Item
+    fd491bb6-4aa3-4598-9f0e-0b8a5d4211f8: 'Navigation Item' # Navigation Item
 plugins:
   ckeditor:
     edition: standard
@@ -94,6 +100,10 @@ plugins:
     enabled: true
     licenseKey: null
     schemaVersion: 4.0.0
+  imager-x-power-pack:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
@@ -112,5 +122,5 @@ system:
   live: true
   name: $PRIMARY_SITE_NAME
   retryDuration: null
-  schemaVersion: 5.0.0.20
+  schemaVersion: 5.3.0.2
   timeZone: America/Los_Angeles
