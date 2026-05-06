@@ -22,15 +22,12 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "craftcms/ckeditor": "4.0.6",
-    "craftcms/cms": "5.3.6",
-    "nystudio107/craft-seomatic": "5.1.2",
-    "nystudio107/craft-vite": "5.0.1",
-    "putyourlightson/craft-sprig": "3.4.0",
-    "spacecatninja/imager-x": "5.0.2",
-    "spacecatninja/imager-x-power-pack": "^1.0.4",
-    "verbb/expanded-singles": "^3.0.0-beta.2",
-    "verbb/hyper": "2.0.4",
+    "craftcms/ckeditor": "^5.5",
+    "craftcms/cms": "^5.9",
+    "nystudio107/craft-seomatic": "^5.1",
+    "nystudio107/craft-vite": "^5.0",
+    "spacecatninja/imager-x": "^5.2",
+    "verbb/hyper": "^2.3",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -50,7 +47,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2"
+      "php": "8.3"
     }
   },
   "scripts": {

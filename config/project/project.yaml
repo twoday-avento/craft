@@ -74,7 +74,6 @@ meta:
     8b6f2883-ab57-43e3-ade5-c4cad6bd1437: Image # Image
     87c7600f-33e8-428e-bf26-6e7ae2e810c5: Page # Page
     343ae097-c332-41f0-adc6-e09c5c3a0b82: Blocks # Blocks
-    357f8891-a837-4fb8-a9c0-fdb55feb61b9: Simple # Simple
     613f92db-4bb4-400f-b1df-1e37fba55961: Pages # Pages
     3788fd07-2352-495d-be22-d8ceaa06f7d3: 'Rich Text' # Rich Text
     801289e1-712a-4546-9107-f8ea1e126509: Image # Image
@@ -89,7 +88,7 @@ plugins:
   ckeditor:
     edition: standard
     enabled: true
-    schemaVersion: 3.0.0.0
+    schemaVersion: 4.0.0.0
   hyper:
     edition: standard
     enabled: true
@@ -100,19 +99,11 @@ plugins:
     enabled: true
     licenseKey: null
     schemaVersion: 4.0.0
-  imager-x-power-pack:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   seomatic:
     edition: standard
     enabled: true
     licenseKey: null
     schemaVersion: 3.0.12
-  sprig:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.1
   vite:
     edition: standard
     enabled: true
@@ -123,4 +114,4 @@ system:
   name: $PRIMARY_SITE_NAME
   retryDuration: null
   schemaVersion: 5.3.0.2
-  timeZone: America/Los_Angeles
+  timeZone: Europe/Oslo
