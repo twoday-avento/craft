@@ -1,20 +1,26 @@
+# Environment
 /.env
+
+# Dependencies
+/vendor
+/node_modules
+
+# Build output
+/web/dist
+
+# Craft CMS
+/config/license.key
+/storage/*
+!/storage/.gitignore
+
+# IDE / Editor
 /.idea
-.DS_Store
-.cache
-.project
-.settings
-*.esproj
-*.sublime-workspace
-*.sublime-project
-*.tmproj
-*.tmproject
 .vscode/*
 !.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
 !.vscode/extensions.json
-config.codekit3
-prepros-6.config
-/node_modules/*
-/vendor
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db

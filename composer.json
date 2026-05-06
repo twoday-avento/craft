@@ -57,7 +57,9 @@
       "@php -r \"rename('.gitignore.default', '.gitignore');\"",
       "@php -r \"unlink('composer.json');\"",
       "@php -r \"rename('composer.json.default', 'composer.json');\"",
+      "@php -r \"file_exists('packages.json') && unlink('packages.json');\"",
       "@php -r \"file_put_contents('./.ddev/config.yaml', str_replace('%PROJECT%', getenv('DDEV_PROJECT'), file_get_contents('./.ddev/config.yaml')));\"",
+      "@php -r \"if (file_exists('.env')) { $id = bin2hex(random_bytes(16)); file_put_contents('.env', str_replace('CRAFT_APP_ID=', 'CRAFT_APP_ID=' . $id, file_get_contents('.env'))); }\"",
       "@composer dump-autoload -o"
     ]
   }
