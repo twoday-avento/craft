@@ -19,10 +19,12 @@ Includes a curated set of plugins and a modern frontend stack:
 | [Hyper](https://plugins.craftcms.com/hyper) | Link fields |
 | [Vite](https://plugins.craftcms.com/vite) | Vite integration for Craft |
 
-### Content Structure
-- **Pages** — structure section with block-based content (Rich Text, Image)
-- **News** — channel section for articles
-- **Navigation** — structure section for menus
+### Template Structure
+- Base layout with Vite asset loading, header/footer includes
+- Error pages (404, 500, 503)
+- Image transform macro (Imager X)
+
+Sections, fields, and content structure are left for you to define per project.
 
 ---
 
@@ -45,8 +47,8 @@ ddev config --project-type=craftcms --docroot=web --create-docroot
 
 ### Step 3: Install CraftUp via Composer
 
-This downloads the starter template and runs the setup script, which swaps in
-the production `composer.json`, `.gitignore`, and configures DDEV.
+This downloads the starter template, installs dependencies, and runs the setup
+script (swaps config files, generates app ID, configures DDEV).
 
 ```bash
 ddev composer create-project -y --stability dev \
@@ -66,13 +68,18 @@ ddev restart
 ### Step 5: Install Craft CMS
 
 This will prompt you for site name, URL, and admin account details.
-Use all defaults or customize as needed.
 
 ```bash
 ddev craft install
 ```
 
-### Step 6: Install frontend dependencies and start developing
+### Step 6: Install plugins
+
+```bash
+ddev craft plugin/install ckeditor seomatic imager-x hyper vite
+```
+
+### Step 7: Install frontend dependencies and start developing
 
 ```bash
 ddev npm install
@@ -91,7 +98,7 @@ The project includes a `Makefile` for common tasks:
 
 ```
 make help       Show all available commands
-make install    Full project setup (start, deps, install)
+make install    Full project setup (start, deps, install, plugins)
 make dev        Start Vite dev server
 make build      Build frontend for production
 make up         Start DDEV + run pending migrations
@@ -118,7 +125,7 @@ Tailwind 4 uses CSS-first configuration. Customize your theme directly in
 config/
   general.php        General config (uses env vars)
   vite.php           Vite plugin config
-  project/           Project config (version-controlled)
+  imager-x.php       Image transform config
 modules/             Custom Craft modules (autoloaded)
 src/
   css/app.css        Tailwind CSS entry point
@@ -126,9 +133,9 @@ src/
   public/            Static assets copied to web root
 templates/
   _errors/           Error pages (404, 500, 503)
-  _includes/         Partials (header, footer, blocks)
-  _layouts/          Layout templates
-  _macros/           Twig macros (images, typography)
+  _includes/         Partials (header, footer)
+  _layouts/          Layout templates (base, default, fragment, message)
+  _macros/           Twig macros (images)
 web/                 Document root (nginx/apache points here)
   dist/              Built assets (gitignored)
 .ddev/               DDEV configuration

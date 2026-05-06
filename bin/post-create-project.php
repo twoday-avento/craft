@@ -4,7 +4,7 @@
  * Post-create-project setup script for CraftUp.
  *
  * Runs automatically via Composer's post-create-project-cmd hook.
- * Handles file swaps, env setup, and schema version patching.
+ * Handles file swaps, env setup, and cleanup of template-only files.
  */
 
 $root = dirname(__DIR__);
@@ -34,7 +34,7 @@ if (file_exists("$root/composer.json.default")) {
 }
 
 // 4. Remove template-only files
-foreach (['packages.json', 'bin/post-create-project.php'] as $file) {
+foreach (['packages.json'] as $file) {
     $path = "$root/$file";
     if (file_exists($path)) {
         unlink($path);
@@ -62,29 +62,16 @@ if (file_exists($envFile)) {
     echo "Generated CRAFT_APP_ID\n";
 }
 
-// 7. Patch project.yaml schema version to match installed Craft
-$craftComposer = "$root/vendor/craftcms/cms/composer.json";
-$projectYaml = "$root/config/project/project.yaml";
-if (file_exists($craftComposer) && file_exists($projectYaml)) {
-    $craftMeta = json_decode(file_get_contents($craftComposer), true);
-    $schemaVersion = $craftMeta['extra']['schemaVersion'] ?? null;
-    if ($schemaVersion) {
-        file_put_contents(
-            $projectYaml,
-            preg_replace(
-                '/schemaVersion: .+/',
-                "schemaVersion: $schemaVersion",
-                file_get_contents($projectYaml)
-            )
-        );
-        echo "Patched project.yaml schema version: $schemaVersion\n";
-    }
-}
-
-// 8. Remove the bin directory if empty
+// 7. Self-cleanup: remove this script and bin dir if empty
+@unlink(__FILE__);
 $binDir = "$root/bin";
 if (is_dir($binDir) && count(glob("$binDir/*")) === 0) {
-    rmdir($binDir);
+    @rmdir($binDir);
 }
 
-echo "\nSetup complete!\n";
+echo "\nSetup complete! Next steps:\n";
+echo "  ddev restart\n";
+echo "  ddev craft install\n";
+echo "  ddev craft plugin/install ckeditor seomatic imager-x hyper vite\n";
+echo "  ddev npm install\n";
+echo "  ddev npm run dev\n";
