@@ -49,7 +49,7 @@ This downloads the starter template and runs the setup script, which swaps in
 the production `composer.json`, `.gitignore`, and configures DDEV.
 
 ```bash
-ddev composer create -y --stability dev \
+ddev composer create-project -y --stability dev \
   --repository '{"url": "https://github.com/twoday-avento/craft", "type": "vcs"}' \
   twoday-avento/craft
 ```
