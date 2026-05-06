@@ -72,6 +72,10 @@ if (is_dir($binDir) && count(glob("$binDir/*")) === 0) {
 echo "\nSetup complete! Next steps:\n";
 echo "  ddev restart\n";
 echo "  ddev craft install\n";
-echo "  ddev craft plugin/install ckeditor seomatic imager-x hyper vite\n";
+echo "  ddev craft plugin/install ckeditor\n";
+echo "  ddev craft plugin/install seomatic\n";
+echo "  ddev craft plugin/install imager-x\n";
+echo "  ddev craft plugin/install hyper\n";
+echo "  ddev craft plugin/install vite\n";
 echo "  ddev npm install\n";
 echo "  ddev npm run dev\n";

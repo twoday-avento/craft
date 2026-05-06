@@ -76,7 +76,11 @@ ddev craft install
 ### Step 6: Install plugins
 
 ```bash
-ddev craft plugin/install ckeditor seomatic imager-x hyper vite
+ddev craft plugin/install ckeditor
+ddev craft plugin/install seomatic
+ddev craft plugin/install imager-x
+ddev craft plugin/install hyper
+ddev craft plugin/install vite
 ```
 
 ### Step 7: Install frontend dependencies and start developing

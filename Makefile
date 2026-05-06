@@ -9,7 +9,11 @@ install: ## Full project setup (start DDEV, install deps, install Craft)
 	ddev npm install
 	@if [ ! -f .env ]; then cp .env.example .env; fi
 	ddev craft install
-	ddev craft plugin/install ckeditor seomatic imager-x hyper vite
+	ddev craft plugin/install ckeditor
+	ddev craft plugin/install seomatic
+	ddev craft plugin/install imager-x
+	ddev craft plugin/install hyper
+	ddev craft plugin/install vite
 	@echo "\n✅ Project ready! Run 'make dev' to start developing."
 
 dev: ## Start Vite dev server
