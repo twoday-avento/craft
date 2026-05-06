@@ -52,14 +52,7 @@
   },
   "scripts": {
     "post-create-project-cmd": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-      "@php -r \"unlink('.gitignore');\"",
-      "@php -r \"rename('.gitignore.default', '.gitignore');\"",
-      "@php -r \"unlink('composer.json');\"",
-      "@php -r \"rename('composer.json.default', 'composer.json');\"",
-      "@php -r \"file_exists('packages.json') && unlink('packages.json');\"",
-      "@php -r \"file_put_contents('./.ddev/config.yaml', str_replace('%PROJECT%', getenv('DDEV_PROJECT'), file_get_contents('./.ddev/config.yaml')));\"",
-      "@php -r \"if (file_exists('.env')) { file_put_contents('.env', str_replace('CRAFT_APP_ID=', 'CRAFT_APP_ID=' . bin2hex(random_bytes(16)), file_get_contents('.env'))); }\"",
+      "@php bin/post-create-project.php",
       "@composer dump-autoload -o"
     ]
   }
