@@ -107,6 +107,8 @@ make dev        Start Vite dev server
 make build      Build frontend for production
 make up         Start DDEV + run pending migrations
 make update     Update all Composer + npm dependencies
+make lint       Run ESLint and Prettier checks
+make format     Auto-format Twig, CSS, and JS files
 make ssh        SSH into the web container
 make clean      Remove vendor, node_modules, dist
 ```

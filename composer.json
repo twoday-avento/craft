@@ -32,6 +32,7 @@
   },
   "require-dev": {
     "craftcms/generator": "^2.0.0",
+    "friendsofphp/php-cs-fixer": "^3.0",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "autoload": {

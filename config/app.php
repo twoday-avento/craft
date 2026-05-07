@@ -17,7 +17,7 @@
  * your config/ folder, alongside this one.
  * 
  * Read more about application configuration:
- * https://craftcms.com/docs/4.x/config/app.html
+ * https://craftcms.com/docs/5.x/system/app.html
  */
 
 use craft\helpers\App;

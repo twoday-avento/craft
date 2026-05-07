@@ -1,4 +1,4 @@
-.PHONY: help install dev build up stop ssh craft composer npm update clean
+.PHONY: help install dev build up stop ssh craft composer npm update lint format clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
@@ -45,6 +45,14 @@ update: ## Update all Composer and npm dependencies
 	ddev composer update
 	ddev npm update
 	ddev craft up
+
+lint: ## Run ESLint and Prettier checks
+	ddev npm run lint
+	ddev npm run format:check
+
+format: ## Auto-format Twig, CSS, and JS files
+	ddev npm run format
+	ddev npm run lint:fix
 
 clean: ## Remove generated files (vendor, node_modules, dist)
 	rm -rf vendor node_modules web/dist
