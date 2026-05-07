@@ -1,0 +1,69 @@
+{% extends "_layouts/default" %}
+
+{% block content %}
+  <main class="min-h-screen flex items-center justify-center bg-gray-50 p-8">
+    <div class="max-w-2xl w-full">
+      <div class="mb-10">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">{{ siteName }}</h1>
+        <p class="mt-2 text-gray-500">Your Craft CMS project is up and running.</p>
+      </div>
+
+      <div class="bg-white rounded-lg border border-gray-200 divide-y divide-gray-200">
+        <div class="p-6">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-400 mb-4">Next Steps</h2>
+          <ol class="space-y-3 text-gray-700">
+            <li class="flex gap-3">
+              <span class="text-gray-400 font-mono text-sm mt-0.5">1.</span>
+              <span>Open the <a href="{{ cpUrl('') }}" class="text-blue-600 underline hover:text-blue-800">control panel</a> and create your first section</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400 font-mono text-sm mt-0.5">2.</span>
+              <span>Add fields and entry types for your content</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-gray-400 font-mono text-sm mt-0.5">3.</span>
+              <span>Replace this template (<code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">templates/index.twig</code>) with your own</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="p-6">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-400 mb-4">Resources</h2>
+          <ul class="space-y-2 text-gray-700">
+            <li>
+              <a href="https://craftcms.com/docs/5.x/" class="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener">Craft CMS Documentation</a>
+              <span class="text-gray-400"> &mdash; official docs</span>
+            </li>
+            <li>
+              <a href="https://craftcms.com/docs/getting-started-tutorial/" class="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener">Getting Started Tutorial</a>
+              <span class="text-gray-400"> &mdash; learn the basics</span>
+            </li>
+            <li>
+              <a href="https://craftcms.com/discord" class="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener">Discord</a>
+              <span class="text-gray-400"> &mdash; community chat</span>
+            </li>
+            <li>
+              <a href="https://craftcms.stackexchange.com/" class="text-blue-600 underline hover:text-blue-800" target="_blank" rel="noopener">Stack Exchange</a>
+              <span class="text-gray-400"> &mdash; Q&amp;A</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-6">
+          <h2 class="text-sm font-semibold uppercase tracking-wide text-gray-400 mb-4">Installed Plugins</h2>
+          <div class="flex flex-wrap gap-2">
+            {% for plugin in craft.app.plugins.allPlugins %}
+              <span class="inline-flex items-center px-2.5 py-1 rounded-md bg-gray-100 text-sm text-gray-700">
+                {{ plugin.name }}
+              </span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-6 text-center text-xs text-gray-400">
+        Craft CMS {{ craft.app.version }} &middot; PHP {{ constant('PHP_VERSION') }}
+      </p>
+    </div>
+  </main>
+{% endblock %}
