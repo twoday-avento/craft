@@ -20,7 +20,7 @@
     "prettier": "^3.0",
     "@zackad/prettier-plugin-twig": "^0.17",
     "tailwindcss": "^4.2",
-    "vite": "^6.0",
+    "vite": "^8.0",
     "vite-plugin-manifest-sri": "^0.2.0",
     "vite-plugin-restart": "^2.0.0"
   },
