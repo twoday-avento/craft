@@ -1,14 +1,3 @@
-{% macro attributes(attributes) %}
-  {% apply spaceless %}
-    {% set attributesString = '' %}
-    {% for attribute, value in attributes %}
-      {% set attributesString = attributesString ~ (attribute) ~ '="' ~ value ~ '" ' %}
-    {% endfor %}
-
-    {{ attributesString|raw }}
-  {% endapply %}
-{% endmacro %}
-
 {% macro image(image, opts) %}
   {% apply spaceless %}
     {% set opts = {
@@ -25,7 +14,6 @@
       format: (image.extension not in ['svg'] and craft.imager.serverSupportsWebp() and craft.imager.clientSupports('webp')) ? 'webp' : image.extension,
     }|merge(opts) %}
 
-
     {% set transformedImages = craft.imager.transformImage(
       image,
       opts.sizes,
@@ -40,13 +28,14 @@
       }
     ) %}
 
-    {% set placeholderOptions = {type: 'svg', color: 'rgba(0,0,0,.025)', width: transformedImages[0].getWidth(), height: transformedImages[0].getHeight()} %}
+    {% set sizesAttr = opts.attributes.sizes ?? '100vw' %}
 
     {% set attributes = {
       alt: image.alt ?? image.title ?? '',
       class: opts.class,
-      src: opts.lazyload ? craft.imager.placeholder(placeholderOptions) : transformedImages[0].url,
-      srcset: opts.lazyload ? transformedImages|srcset : null,
+      src: opts.lazyload ? craft.imager.placeholder({type: 'svg', color: 'rgba(0,0,0,.025)', width: transformedImages[0].getWidth(), height: transformedImages[0].getHeight()}) : transformedImages[0].url,
+      srcset: transformedImages|srcset,
+      sizes: sizesAttr,
       width: transformedImages[0].getWidth(),
       height: transformedImages[0].getHeight(),
       loading: opts.lazyload ? 'lazy' : 'eager',
@@ -57,5 +46,3 @@
     <img {{ attr(attributes) }}>
   </picture>
 {% endmacro %}
-
-
